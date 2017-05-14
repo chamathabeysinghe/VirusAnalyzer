@@ -59,7 +59,8 @@ public class ProcessMatch {
             s.getProcessTree(da.getPid()).accept(new Visitor(), 0);
             
         } catch (IOException ex) {
-            Logger.getLogger(ProcessMatch.class.getName()).log(Level.SEVERE, null, ex);
+            Manager.getManager().getReport().addString("", "=== Not a executable file ===");
+
         }
     }
 
