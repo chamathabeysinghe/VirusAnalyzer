@@ -18,7 +18,7 @@ public class VirusAnalyzer {
         // TODO code application logic here
         HashMatch h=new HashMatch();
         boolean b=h.isMatch("C:\\Projects\\VirusAnalyzer\\build.xml");
-        System.out.println(b);
+//        System.out.println(b);
     }
     
 }

@@ -5,10 +5,26 @@
  */
 package virusanalyzer;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Chamath Abeysinghe
  */
 public class Report {
+    private ArrayList<String> results=new ArrayList<String>();
+    private ArrayList<String> topic=new ArrayList<>();
+    public void addString(String s,String t){
+        results.add(s);
+        topic.add(t);
+    }
+
+    public ArrayList<String> getResults() {
+        return results;
+    }
+
+    public ArrayList<String> getTopic() {
+        return topic;
+    }
     
 }

@@ -49,7 +49,19 @@ public class HashMatch {
     }
     
     public boolean isMatch(String path){
-        return hashList.contains(findHash(path));
+        String hash=findHash(path);
+        boolean status= hashList.contains(hash);
+        if(status){
+            Manager.getManager().getReport().addString("File is detected as a virus", "Status : ");
+            Manager.getManager().getReport().addString(hash, "MD5 Signature : ");
         
+        }
+        else{
+            Manager.getManager().getReport().addString("File is not a virus", "Status : ");
+            Manager.getManager().getReport().addString(hash, "MD5 Signature : ");
+        }
+            
+        return status;
+                
     }
 }

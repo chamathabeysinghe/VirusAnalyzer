@@ -17,7 +17,6 @@ public class Manager {
     private FileMatch fileMatch;
     
     private Manager(){
-        manager=new Manager();
         report=new Report();
         hashMatch=new HashMatch();
         fileMatch=new FileMatch();
@@ -30,5 +29,13 @@ public class Manager {
         return manager;
     }
     
+    public Report getReport(){
+        return report;
+    }
+    
+    public void checkFile(String path){
+        hashMatch.isMatch(path);
+        fileMatch.findFileType(path);
+    }
     
 }
