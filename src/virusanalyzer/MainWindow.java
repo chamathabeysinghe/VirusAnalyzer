@@ -122,7 +122,7 @@ public class MainWindow extends javax.swing.JFrame {
         ArrayList<String> topics=Manager.getManager().getReport().getTopic();
         
         for(int i=0;i<items.size();i++){
-            jTextArea1.setText(jTextArea1.getText()+topics.get(i)+" : "+items.get(i)+"\n");
+            jTextArea1.setText(jTextArea1.getText()+topics.get(i)+" "+items.get(i)+"\n");
           
         }
         

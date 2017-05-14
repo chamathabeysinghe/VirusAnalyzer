@@ -15,10 +15,7 @@ public class VirusAnalyzer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        HashMatch h=new HashMatch();
-        boolean b=h.isMatch("C:\\Projects\\VirusAnalyzer\\build.xml");
-//        System.out.println(b);
+        MainWindow.main(args);
     }
     
 }

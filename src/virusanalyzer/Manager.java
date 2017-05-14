@@ -15,11 +15,13 @@ public class Manager {
     private Report report;
     private HashMatch hashMatch;
     private FileMatch fileMatch;
+    private ProcessMatch processMatch;
     
     private Manager(){
         report=new Report();
         hashMatch=new HashMatch();
         fileMatch=new FileMatch();
+        processMatch=new ProcessMatch();
     }
     
     public static Manager getManager(){
@@ -36,6 +38,7 @@ public class Manager {
     public void checkFile(String path){
         hashMatch.isMatch(path);
         fileMatch.findFileType(path);
+        processMatch.runProcess(path);
     }
     
 }
